@@ -14,8 +14,8 @@ const ProductTable = ({ products, onEdit, onDelete }) => {
                 <thead>
                     <tr>
                         <th className="bg-blue-500 text-white px-4 py-2">Name</th>
-                        <th className="bg-blue-500 text-white px-4 py-2">Specifics</th>
                         <th className="bg-blue-500 text-white px-4 py-2">Quantity</th>
+                        <th className="bg-blue-500 text-white px-4 py-2">Specifics</th>
                         <th className="bg-blue-500 text-white px-4 py-2">Expiry Date</th>
                         <th className="bg-blue-500 text-white px-4 py-2">Actions</th>
                     </tr>
@@ -27,8 +27,8 @@ const ProductTable = ({ products, onEdit, onDelete }) => {
                             className={isExpiringSoon(product.expiry_date) ? 'bg-yellow-100' : ''}
                         >
                             <td className="border px-4 py-2">{product.name}</td>
-                            <td className="border px-4 py-2">{product.specifics}</td>
                             <td className="border px-4 py-2">{product.quantity}</td>
+                            <td className="border px-4 py-2">{product.specifics}</td>
                             <td className="border px-4 py-2">{product.expiry_date}</td>
                             <td className="border px-4 py-2 flex gap-2">
                                 <button
