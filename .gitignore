@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+# Build output
+dist/
+build/
+# SQLite database files
+*.sqlite
+*.db
+# Environment variables
+.env
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# OS files
+.DS_Store
+Thumbs.db
+# Vite cache
+.vite/
+# Electron packaging output
+release/
+out/
+# VSCode settings
+.vscode/

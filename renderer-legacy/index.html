@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Desktop Solution - Inventory</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Home Page View -->
+    <div id="home-page-view">
+        <h1>Welcome to One Desktop Solution</h1>
+
+        <button onclick="openInventory()">Manage Inventory</button>
+        <button onclick="openBilling()">Billing</button>
+        <button onclick="openReturns()">Returns</button>
+        <button onclick="syncCloud()">Sync to Cloud</button>
+
+        <div id="content"></div>
+    </div>
+
+    <!-- Inventory Management View (Initially Hidden) -->
+    <div id="inventory-page-view" style="display: none;">
+        <h2>Inventory Management</h2>
+
+        <!-- Product Form View -->
+        <div id="product-form-view" style="display: none;">
+            <section class="form-section">
+                <h2 id="form-title">Add New Product</h2>
+                <form id="product-form">
+                    <input type="text" id="name" placeholder="Product Name" required>
+                    <input type="text" id="specifics" placeholder="Specifics (Flavor, Weight, Volume)" required>
+                    <input type="date" id="purchase_date" required>
+                    <input type="number" id="quantity" placeholder="Quantity" required>
+                    <input type="number" id="purchase_price" placeholder="Purchase Price" step="0.01" required>
+                    <input type="number" id="discount" placeholder="Discount (%)" step="0.01" required>
+                    <input type="number" id="mrp" placeholder="MRP" step="0.01" required>
+                    <input type="date" id="expiry_date" required>
+                    <button type="submit" id="submit-btn">Add Product</button>
+                    <button type="button" id="back-to-inventory-btn">Back to Inventory List</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Inventory Table View -->
+        <div id="inventory-list-view">
+            <section class="table-section">
+                <button id="add-product-btn">Add New Product</button>
+                <table id="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Specifics</th>
+                            <th>Quantity</th>
+                            <th>Expiry Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Products will be loaded here -->
+                    </tbody>
+                </table>
+                <button id="back-to-home-btn">Back to Home</button>
+            </section>
+        </div>
+    </div>
+
+    <!-- Billing View (Future) -->
+    <div id="billing-page-view" style="display: none;">
+        <h2>Billing Module (Coming Soon)</h2>
+        <button onclick="goHome()">Back to Home</button>
+    </div>
+
+    <!-- Returns View (Future) -->
+    <div id="returns-page-view" style="display: none;">
+        <h2>Returns Module (Coming Soon)</h2>
+        <button onclick="goHome()">Back to Home</button>
+    </div>
+
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
