@@ -14,7 +14,7 @@ function createWindow () {
             contextIsolation: true,  // Make sure context isolation is enabled
         }
     });
- win.webContents.openDevTools(); 
+
     // Check if Vite is running in development mode
     if (process.env.NODE_ENV === 'development') {
         console.log('Loading React app from Vite dev server...');
